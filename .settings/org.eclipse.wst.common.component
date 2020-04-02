@@ -5,6 +5,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
         <property name="java-output-path" value="/S07L01-SpringMVCminimalSetup/build/classes"/>
-        <property name="context-root" value="S33L03-AddTheServiceLayerPart1"/>
+        <property name="context-root" value="S34L02-AddProductFunctionality"/>
     </wb-module>
 </project-modules>
