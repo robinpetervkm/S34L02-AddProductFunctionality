@@ -26,7 +26,9 @@ public class MainController {
 	}
 
 	@GetMapping("/addProductForm")
-	public String addProductForm() {
+	public String addProductForm(Model model) {
+		Product product = new Product();
+		model.addAttribute("product", product);
 		return "addProductForm";
 	}
 }
