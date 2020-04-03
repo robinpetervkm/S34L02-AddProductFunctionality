@@ -10,4 +10,6 @@ public interface AppService {
 
 	void addProduct(Product product);
 
+	Product getProduct(int id);
+
 }

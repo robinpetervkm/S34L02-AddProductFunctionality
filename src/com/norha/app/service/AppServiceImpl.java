@@ -27,4 +27,10 @@ public class AppServiceImpl implements AppService {
 		productDAO.addProduct(product);
 	}
 
+	@Override
+	@Transactional
+	public Product getProduct(int id) {
+		return productDAO.getProduct(id);
+	}
+
 }

@@ -39,9 +39,10 @@ public class MainController {
 		return "redirect:/";
 	}
 	@GetMapping("/updateProductForm")
-	public String addProduct(@RequestParam("id") int id,
+	public String updateProductForm(@RequestParam("id") int id,
 			Model model) {
-		System.out.println(id);
-		return null;
+		Product product = appService.getProduct(id);
+		model.addAttribute("product", product);
+		return "addProductForm";
 	}
 }
