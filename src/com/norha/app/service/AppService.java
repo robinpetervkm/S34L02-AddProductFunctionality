@@ -12,4 +12,6 @@ public interface AppService {
 
 	Product getProduct(int id);
 
+	void deleteProduct(int id);
+
 }

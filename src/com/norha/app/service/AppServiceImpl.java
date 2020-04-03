@@ -33,4 +33,10 @@ public class AppServiceImpl implements AppService {
 		return productDAO.getProduct(id);
 	}
 
+	@Override
+	@Transactional
+	public void deleteProduct(int id) {
+		productDAO.deleteProduct(id);		
+	}
+
 }

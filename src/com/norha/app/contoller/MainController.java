@@ -37,12 +37,17 @@ public class MainController {
 		System.out.println(product);
 		appService.addProduct(product);
 		return "redirect:/";
-	}
+	} 
 	@GetMapping("/updateProductForm")
 	public String updateProductForm(@RequestParam("id") int id,
 			Model model) {
 		Product product = appService.getProduct(id);
 		model.addAttribute("product", product);
 		return "addProductForm";
+	}
+	@GetMapping("/deleteProduct")
+	public String deleteProduct(@RequestParam("id") int id) {
+		appService.deleteProduct(id);
+		return "redirect:/";
 	}
 }

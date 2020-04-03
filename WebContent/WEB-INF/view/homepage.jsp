@@ -36,9 +36,13 @@
 					<td>${product.productName}</td>
 					<td>${product.cost}</td>
 					<td><a href="${pageContext.request.contextPath}
-					/updateProductForm?id=${product.productID}">Update</a></td>
+					/updateProductForm?id=${product.productID}">Update</a>
+					|
+					<a href="${pageContext.request.contextPath}
+					/deleteProduct?id=${product.productID}"
+					onclick="if(!(confirm('Are you sure to Delete?'))) return false">Delete</a>
+					</td>
 				</tr>
-
 			</c:forEach>
 		</table>
 	</div>
