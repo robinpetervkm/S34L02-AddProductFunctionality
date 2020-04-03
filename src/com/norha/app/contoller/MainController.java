@@ -34,6 +34,8 @@ public class MainController {
 	@PostMapping("/addProduct")
 	public String addProduct(@ModelAttribute("product") Product product) {
 		System.out.println(product);
+		appService.addProduct(product);
+		
 		return "redirect:/";
 	}
 }

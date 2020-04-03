@@ -6,4 +6,6 @@ import com.norha.app.entity.Product;
 
 public interface ProductDAO {
 	public List<Product> getProducts();
+
+	public void addProduct(Product product);
 }
