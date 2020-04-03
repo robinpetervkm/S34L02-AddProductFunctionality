@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.norha.app.entity.Product;
 import com.norha.app.service.AppService;
@@ -35,7 +36,12 @@ public class MainController {
 	public String addProduct(@ModelAttribute("product") Product product) {
 		System.out.println(product);
 		appService.addProduct(product);
-		
 		return "redirect:/";
+	}
+	@GetMapping("/updateProductForm")
+	public String addProduct(@RequestParam("id") int id,
+			Model model) {
+		System.out.println(id);
+		return null;
 	}
 }

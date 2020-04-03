@@ -25,6 +25,7 @@
 				<th>Product ID</th>
 				<th>Product Name</th>
 				<th>Cost($)</th>
+				<th>Operation</th>
 			</tr>
 
 			<!-- loop over and print our customers -->
@@ -34,6 +35,8 @@
 					<td>${product.productID}</td>
 					<td>${product.productName}</td>
 					<td>${product.cost}</td>
+					<td><a href="${pageContext.request.contextPath}
+					/updateProductForm?id=${product.productID}">Update</a></td>
 				</tr>
 
 			</c:forEach>
