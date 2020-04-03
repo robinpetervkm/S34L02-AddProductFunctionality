@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.norha.app.entity.Product;
 import com.norha.app.service.AppService;
@@ -30,5 +30,10 @@ public class MainController {
 		Product product = new Product();
 		model.addAttribute("product", product);
 		return "addProductForm";
+	}
+	@PostMapping("/addProduct")
+	public String addProduct(@ModelAttribute("product") Product product) {
+		System.out.println(product);
+		return null;
 	}
 }
